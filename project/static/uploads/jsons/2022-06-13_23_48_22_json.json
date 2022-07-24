@@ -1,0 +1,190 @@
+{
+    "Handle": {
+        "col_name": "nan",
+        "defalut_value": "nan"
+    },
+    "Title": {
+        "col_name": "nan",
+        "defalut_value": "nan"
+    },
+    "Body (HTML)": {
+        "col_name": "nan",
+        "defalut_value": "nan"
+    },
+    "Vendor": {
+        "col_name": "nan",
+        "defalut_value": "nan"
+    },
+    "Type": {
+        "col_name": "nan",
+        "defalut_value": "nan"
+    },
+    "Tags": {
+        "col_name": "nan",
+        "defalut_value": "nan"
+    },
+    "Published": {
+        "col_name": "nan",
+        "defalut_value": "nan"
+    },
+    "Option1 Name": {
+        "col_name": "nan",
+        "defalut_value": "nan"
+    },
+    "Option1 Value": {
+        "col_name": "nan",
+        "defalut_value": "nan"
+    },
+    "Option2 Name": {
+        "col_name": "nan",
+        "defalut_value": "nan"
+    },
+    "Option2 Value": {
+        "col_name": "nan",
+        "defalut_value": "nan"
+    },
+    "Option3 Name": {
+        "col_name": "nan",
+        "defalut_value": "nan"
+    },
+    "Option3 Value": {
+        "col_name": "nan",
+        "defalut_value": "nan"
+    },
+    "Variant SKU": {
+        "col_name": "nan",
+        "defalut_value": "nan"
+    },
+    "Variant Grams": {
+        "col_name": "nan",
+        "defalut_value": "nan"
+    },
+    "Variant Inventory Tracker": {
+        "col_name": "nan",
+        "defalut_value": "nan"
+    },
+    "Variant Inventory Qty": {
+        "col_name": "nan",
+        "defalut_value": "nan"
+    },
+    "Variant Inventory Policy": {
+        "col_name": "nan",
+        "defalut_value": "nan"
+    },
+    "Variant Fulfillment Service": {
+        "col_name": "nan",
+        "defalut_value": "nan"
+    },
+    "Variant Price": {
+        "col_name": "nan",
+        "defalut_value": "nan"
+    },
+    "Variant Compare At Price": {
+        "col_name": "nan",
+        "defalut_value": "nan"
+    },
+    "Variant Requires Shipping": {
+        "col_name": "nan",
+        "defalut_value": "nan"
+    },
+    "Variant Taxable": {
+        "col_name": "nan",
+        "defalut_value": "nan"
+    },
+    "Variant Barcode": {
+        "col_name": "nan",
+        "defalut_value": "nan"
+    },
+    "Image Src": {
+        "col_name": "nan",
+        "defalut_value": "nan"
+    },
+    "Image Position": {
+        "col_name": "nan",
+        "defalut_value": "nan"
+    },
+    "Image Alt Text": {
+        "col_name": "nan",
+        "defalut_value": "nan"
+    },
+    "Gift Card": {
+        "col_name": "nan",
+        "defalut_value": "nan"
+    },
+    "SEO Title": {
+        "col_name": "nan",
+        "defalut_value": "nan"
+    },
+    "SEO Description": {
+        "col_name": "nan",
+        "defalut_value": "nan"
+    },
+    "Google Shopping / Google Product Category": {
+        "col_name": "nan",
+        "defalut_value": "nan"
+    },
+    "Google Shopping / Gender": {
+        "col_name": "nan",
+        "defalut_value": "nan"
+    },
+    "Google Shopping / Age Group": {
+        "col_name": "nan",
+        "defalut_value": "nan"
+    },
+    "Google Shopping / MPN": {
+        "col_name": "nan",
+        "defalut_value": "nan"
+    },
+    "Google Shopping / AdWords Grouping": {
+        "col_name": "nan",
+        "defalut_value": "nan"
+    },
+    "Google Shopping / AdWords Labels": {
+        "col_name": "nan",
+        "defalut_value": "nan"
+    },
+    "Google Shopping / Condition": {
+        "col_name": "nan",
+        "defalut_value": "nan"
+    },
+    "Google Shopping / Custom Product": {
+        "col_name": "nan",
+        "defalut_value": "nan"
+    },
+    "Google Shopping / Custom Label 0": {
+        "col_name": "nan",
+        "defalut_value": "nan"
+    },
+    "Google Shopping / Custom Label 1": {
+        "col_name": "nan",
+        "defalut_value": "nan"
+    },
+    "Google Shopping / Custom Label 2": {
+        "col_name": "nan",
+        "defalut_value": "nan"
+    },
+    "Google Shopping / Custom Label 3": {
+        "col_name": "nan",
+        "defalut_value": "nan"
+    },
+    "Google Shopping / Custom Label 4": {
+        "col_name": "nan",
+        "defalut_value": "nan"
+    },
+    "Variant Image": {
+        "col_name": "nan",
+        "defalut_value": "nan"
+    },
+    "Variant Weight Unit": {
+        "col_name": "nan",
+        "defalut_value": "nan"
+    },
+    "Variant Tax Code": {
+        "col_name": "nan",
+        "defalut_value": "nan"
+    },
+    "Cost per item": {
+        "col_name": "nan",
+        "defalut_value": "nan"
+    }
+}

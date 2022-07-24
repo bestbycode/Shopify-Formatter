@@ -1,0 +1,73 @@
+body {
+    background-color: white;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.main-content {
+    background-color: white;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.tool-header h2 {
+    font-family: 'Hind Madurai', sans-serif;
+    /* text-align: center; */
+    color: #181819;
+    font-size: 35px;
+    /*line-height: 44px;
+    font-weight: 800;
+    font-weight: bold;  */
+}
+
+.uploader {
+    margin-top: 5%;
+    padding: 0 10%;
+    text-align: left;
+}
+
+.upload-input {
+    /* width: 50%; */
+
+}
+
+.upload-label {
+    display: block;
+}
+
+.upload-label h4 {
+    font-family: 'Hind Madurai', sans-serif;
+    text-align: left;
+    height: 100px;
+}
+
+.submit-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+    padding: 0 20%;
+}
+
+.submit-button button {
+    background-color: #3F4C26;
+}
+
+@media only screen and (min-width: 900px) {
+
+    nav a {
+        margin: 0 19%;
+    }
+
+    main {
+        margin: 0 10%;
+    }
+
+    .upload-label h4 {
+        height: 60px;
+    }
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/styles/index.css">
+    <title>SFC</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <!-- Image and text -->
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="../static/imgs/LogoMakr-8g2Wg1.png" width="30" height="30" class="d-inline-block align-top"
+                    alt="">
+                Shopify Formatter
+            </a>
+        </nav>
+    </header>
+    <main>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <div class="container main-content">
+                <div class="row">
+                    <div class="col tool-header">
+                        <h2>Convert products spreadsheets to Shopify's Products format </h2>
+                        <p>Get the JSON template file from <a href="/download"
+                                style="text-decoration: underline;">here</a>.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 uploader">
+                        <label for="excelFile" class="form-label upload-label">
+                            <h4>Upload spreadsheet file</h4>
+                        </label>
+                        <input name="excelFile" class="form-control form-control-sm upload-input" id="excelFile"
+                            type="file" required />
+                        <p>file format (.csv or .xlsx)</p>
+                    </div>
+
+                    <div class="col-6 uploader">
+                        <label for="jsonFile" class="form-label upload-label">
+                            <h4>Upload JSON file of the spreadsheet format</h4>
+                        </label>
+                        <input name="jsonFile" class="form-control form-control-sm upload-input" id="jsonFile"
+                            type="file" required />
+                        <p>file format (.json)</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 text-center submit-button">
+                        <!-- <button type="button" class="btn btn-primary">Convert Format</button> -->
+                        <!-- <button type="submit" class="btn btn-success btn-lg btn-block">Convert Format</button> -->
+                        <input type="submit" class="btn btn-success btn-lg btn-block" value="Convert Format">
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </main>
+    <footer>
+        <div class="bg-light py-4">
+            <div class="container text-center">
+                <p class="text-muted mb-0 py-2">&copy;Shopify Formatter <span className='date'>{{year}}</span></p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
