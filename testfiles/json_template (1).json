@@ -1,10 +1,10 @@
 {
     "Handle": {
-        "col_name": "",
+        "col_name": "Item",
         "default_value": ""
     },
     "Title": {
-        "col_name": "",
+        "col_name": "ItemDesc",
         "default_value": ""
     },
     "Body (HTML)": {
@@ -13,7 +13,7 @@
     },
     "Vendor": {
         "col_name": "",
-        "default_value": ""
+        "default_value": "Emirates Snack Foods"
     },
     "Type": {
         "col_name": "",
@@ -32,7 +32,7 @@
         "default_value": "Expiry Date"
     },
     "Option1 Value": {
-        "col_name": "",
+        "col_name": "ExpiryDate",
         "default_value": ""
     },
     "Option2 Name": {
@@ -61,10 +61,10 @@
     },
     "Variant Inventory Tracker": {
         "col_name": "",
-        "default_value": ""
+        "default_value": "shopify"
     },
     "Variant Inventory Qty": {
-        "col_name": "",
+        "col_name": "Cases",
         "default_value": ""
     },
     "Variant Inventory Policy": {
@@ -76,12 +76,12 @@
         "default_value": "manual"
     },
     "Variant Price": {
-        "col_name": "",
+        "col_name": "Expiry Price / Case",
         "default_value": ""
     },
     "Variant Compare At Price": {
         "col_name": "",
-        "default_value":
+        "default_value": ""
     },
     "Variant Requires Shipping": {
         "col_name": "",
@@ -92,7 +92,7 @@
         "default_value": ""
     },
     "Variant Barcode": {
-        "col_name": "",
+        "col_name": "Barcode",
         "default_value": ""
     },
     "Image Src": {
@@ -184,7 +184,7 @@
         "default_value": ""
     },
     "Cost per item": {
-        "col_name": "",
+        "col_name": "Expiry Price / Case",
         "default_value": ""
     }
 }
