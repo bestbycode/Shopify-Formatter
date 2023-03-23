@@ -1,11 +1,14 @@
 from flask import Flask, render_template, request, redirect, send_file
 from werkzeug.utils import secure_filename
 from datetime import date, datetime
-from file_parser import convert_format
+from file_parser import convert_format, get_cols
 
 import os
+from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 
 @app.route("/")
@@ -13,25 +16,31 @@ def Home():
     current_year = date.today().year
     return render_template('index.html', year=current_year)
 
+# @app.route("/upload2")
+# def upload2():
+#     print("Trying")
+#     return 'wrong file types !!'
 
-@app.route("/upload", methods=['POST'])
-def upload():
-    json_file = request.files['jsonFile']
+@app.post("/getColumns")
+def getColumns():
+    print("Trying")
+    # json_file = request.files['jsonFile']
     excel_file = request.files['excelFile']
-    json_ext = os.path.splitext(json_file.filename)[1]
+    # json_ext = os.path.splitext(json_file.filename)[1]
     sheet_ext = os.path.splitext(excel_file.filename)[1]
 
-    if (json_ext == '.json') and (sheet_ext in [".csv", ".xlsx"]):
-        json_name = datetime.now().strftime('%Y-%m-%d_%H_%M_%S') + "_json" + json_ext
+    if (sheet_ext in [".csv", ".xlsx"]):
+        # json_name = datetime.now().strftime('%Y-%m-%d_%H_%M_%S') + "_json" + json_ext
         sheet_name = datetime.now().strftime('%Y-%m-%d_%H_%M_%S') + "_sheet" + sheet_ext
 
-        json_file_path = f'./static/uploads/jsons/{secure_filename(json_name)}'
+        # json_file_path = f'./static/uploads/jsons/{secure_filename(json_name)}'
         sheet_file_path = f'./static/uploads/spreadsheets/{secure_filename(sheet_name)}'
-        json_file.save(json_file_path)
+        # json_file.save(json_file_path)
         excel_file.save(sheet_file_path)
 
-        convert_format(sheet_file=sheet_file_path, json_file=json_file_path)
-        return redirect("/send_file")
+        cols = get_cols(sheet_file=sheet_file_path).tolist()
+        return cols
+        # return redirect("/send_file")
 
     else:
         return 'wrong file types !!'
