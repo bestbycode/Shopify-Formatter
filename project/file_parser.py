@@ -5,10 +5,14 @@ import json
 
 def parse_excel_sheet(file, sheet_name=0, threshold=6):
     '''parses multiple tables from an excel sheet into multiple data frame objects. Returns [dfs, df_mds], where dfs is a list of data frames and df_mds their potential associated metadata'''
-    xl = pd.ExcelFile(file)
-    entire_sheet = xl.parse(sheet_name=sheet_name)
-    print("A")
-    print(entire_sheet)
+    try:
+        xl = pd.ExcelFile(file)
+        entire_sheet = xl.parse(sheet_name=sheet_name)
+    except:
+        try:
+            entire_sheet = pd.read_csv(file, encoding="iso-8859-1")
+        except:
+            return []
 
     # Return if there is only 1 sheet
     # Check if there are any empty rows
@@ -17,25 +21,19 @@ def parse_excel_sheet(file, sheet_name=0, threshold=6):
     # count the number of non-Nan cells in each row and then the change in that number between adjacent rows
     n_values = np.logical_not(entire_sheet.isnull()).sum(axis=1)
 
-    print("B")
-    print(n_values)
     n_values_deltas = n_values[1:] - n_values[:-1].values
-    print("C")
-    print(n_values_deltas)
+
 
     # define the beginnings and ends of tables using delta in n_values
     table_beginnings = n_values_deltas > threshold
     # print("D")
     # print(table_beginnings)
     table_beginnings = table_beginnings[table_beginnings].index
-    print("E")
-    print(table_beginnings)
+
     table_endings = n_values_deltas < -threshold
-    print("F")
-    print(table_endings)
+
     table_endings = table_endings[table_endings].index
-    print("G")
-    print(table_endings)
+
     if len(table_beginnings) < len(table_endings) or len(table_beginnings) > len(table_endings)+1:
         raise BaseException(
             'Could not detect equal number of beginnings and ends')
@@ -71,13 +69,17 @@ def convert_df(df, json):
 
     df_m = df_m.replace({"": np.nan})
     df_m.to_excel("./result.xlsx")
+    return df_m
+    # df_m.to_excel("./result.xlsx")
 
 
 
 def convert_format(sheet_file, json_file):
     df = parse_excel_sheet(sheet_file)
     json = read_json_file(json_file)
-    convert_df(df, json)
+    df_m = convert_df(df, json)
     print("done!")
+    return df_m
+    # print("done!")
 
     

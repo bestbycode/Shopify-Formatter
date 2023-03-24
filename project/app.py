@@ -1,11 +1,16 @@
 from flask import Flask, render_template, request, redirect, send_file
+from flask_cors import CORS, cross_origin
 from werkzeug.utils import secure_filename
 from datetime import date, datetime
 from file_parser import convert_format
+import simplejson
 
+# import json
 import os
 
 app = Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 
 @app.route("/")
@@ -14,7 +19,7 @@ def Home():
     return render_template('index.html', year=current_year)
 
 
-@app.route("/upload", methods=['POST'])
+@app.post("/upload")
 def upload():
     json_file = request.files['jsonFile']
     excel_file = request.files['excelFile']
@@ -30,9 +35,12 @@ def upload():
         json_file.save(json_file_path)
         excel_file.save(sheet_file_path)
 
-        convert_format(sheet_file=sheet_file_path, json_file=json_file_path)
-        return redirect("/send_file")
-
+        products_data = convert_format(sheet_file=sheet_file_path, json_file=json_file_path)
+        # return redirect("/send_file")
+        print(products_data.to_dict('records'))
+        # string_output = json.dumps(products_data.to_dict('records'), ignore_nan=True)
+        string_output = simplejson.dumps(products_data.to_dict('records'), ignore_nan=True)
+        return string_output
     else:
         return 'wrong file types !!'
 

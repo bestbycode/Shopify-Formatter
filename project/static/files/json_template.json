@@ -61,7 +61,7 @@
     },
     "Variant Inventory Tracker": {
         "col_name": "",
-        "default_value": ""
+        "default_value": "shopify"
     },
     "Variant Inventory Qty": {
         "col_name": "",
@@ -81,7 +81,7 @@
     },
     "Variant Compare At Price": {
         "col_name": "",
-        "default_value":
+        "default_value": ""
     },
     "Variant Requires Shipping": {
         "col_name": "",
