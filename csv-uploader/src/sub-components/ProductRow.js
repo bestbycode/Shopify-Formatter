@@ -23,7 +23,7 @@ function ProductRow({ productData }) {
     })
     let res = await axios.post("http://localhost:5000/upload-product", formData);
 
-    if (res.status === 200) {
+    if (res.status === 200 || res.status === 201) {
       setSent(1);
     } else {
       setSent(2);
