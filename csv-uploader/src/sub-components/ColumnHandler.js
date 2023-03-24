@@ -19,11 +19,13 @@ class columnHandler {
   constructor(name, handlerFunction){
     this.name = name;
     this.initializer = handlerFunction;
+    this.value = "";
   }
   getName = () => this.name;
 
   getInitialValue = (productData) => {
-    return this.initializer(this.name, productData);
+    this.value = this.initializer(this.name, productData);
+    return this.value;
   }
 }
 

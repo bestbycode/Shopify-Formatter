@@ -48,3 +48,11 @@
   height: 200px;
   width: 200px;
 }
+
+.red-bg{ 
+  background-color: rgb(255, 221, 221);
+}
+
+.green-bg{
+  background-color: rgb(214, 254, 214);
+}

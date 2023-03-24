@@ -3,10 +3,12 @@ import "./App.css";
 import { useState } from "react";
 import axios from "axios";
 import ProductRow from "./sub-components/ProductRow";
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [productsData, setProductsData] = useState([]);
   console.log("App building...");
+
   async function getProductData() {
     const fileInput = document.getElementById("excelFile");
     const file = fileInput.files[0];
@@ -25,18 +27,10 @@ function App() {
       // let d = JSON.parse(res.data);
       setProductsData([...res.data]);
     }
+  }
 
-    // fetch("/getColumns", {
-    //   method: "POST",
-    //   body: formData,
-    // })
-    //   .then((response) => response.json())
-    //   .then((data) => {
-
-    //     console.log(data);
-    //     // Now add the appropriate divs and stuff
-    //   })
-    //   .catch((error) => console.error(error));
+  async function uploadProducts(e) {
+    e.preventDefault();
   }
 
   return (
@@ -107,20 +101,21 @@ function App() {
         <hr />
       </div>
       <div className="container">
-        <h3>Products Below</h3>
-        {productsData.length}
-        {productsData.map((product, i) => (
-          // <div></div>
-          <ProductRow productData={product} />
-        ))}
+        <form action="">
+          <h3>Products Below</h3>
+          {productsData.length}
+          {productsData.map((product, i) => (
+            // <div></div>
+            <ProductRow productData={product} />
+          ))}
 
-        <button
-          type="submit"
-          className="btn btn-success btn-lg btn-block"
-          onClick={getProductData}
-        >
-          Convert Format
-        </button>
+          <button
+            className="btn btn-success btn-lg btn-block"
+            onClick={uploadProducts}
+          >
+            Upload all products
+          </button>
+        </form>
       </div>
     </div>
   );

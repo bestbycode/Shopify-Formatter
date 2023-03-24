@@ -7,23 +7,7 @@
         "col_name": "",
         "default_value": ""
     },
-    "Body (HTML)": {
-        "col_name": "",
-        "default_value": ""
-    },
     "Vendor": {
-        "col_name": "",
-        "default_value": ""
-    },
-    "Type": {
-        "col_name": "",
-        "default_value": ""
-    },
-    "Tags": {
-        "col_name": "",
-        "default_value": "All"
-    },
-    "Published": {
         "col_name": "",
         "default_value": ""
     },
@@ -35,27 +19,7 @@
         "col_name": "",
         "default_value": ""
     },
-    "Option2 Name": {
-        "col_name": "",
-        "default_value": ""
-    },
-    "Option2 Value": {
-        "col_name": "",
-        "default_value": ""
-    },
-    "Option3 Name": {
-        "col_name": "",
-        "default_value": ""
-    },
-    "Option3 Value": {
-        "col_name": "",
-        "default_value": ""
-    },
-    "Variant SKU": {
-        "col_name": "",
-        "default_value": ""
-    },
-    "Variant Grams": {
+    "Variant Weight": {
         "col_name": "",
         "default_value": ""
     },
@@ -79,99 +43,7 @@
         "col_name": "",
         "default_value": ""
     },
-    "Variant Compare At Price": {
-        "col_name": "",
-        "default_value": ""
-    },
-    "Variant Requires Shipping": {
-        "col_name": "",
-        "default_value": ""
-    },
-    "Variant Taxable": {
-        "col_name": "",
-        "default_value": ""
-    },
-    "Variant Barcode": {
-        "col_name": "",
-        "default_value": ""
-    },
     "Image Src": {
-        "col_name": "",
-        "default_value": ""
-    },
-    "Image Position": {
-        "col_name": "",
-        "default_value": ""
-    },
-    "Image Alt Text": {
-        "col_name": "",
-        "default_value": ""
-    },
-    "Gift Card": {
-        "col_name": "",
-        "default_value": ""
-    },
-    "SEO Title": {
-        "col_name": "",
-        "default_value": ""
-    },
-    "SEO Description": {
-        "col_name": "",
-        "default_value": ""
-    },
-    "Google Shopping / Google Product Category": {
-        "col_name": "",
-        "default_value": ""
-    },
-    "Google Shopping / Gender": {
-        "col_name": "",
-        "default_value": ""
-    },
-    "Google Shopping / Age Group": {
-        "col_name": "",
-        "default_value": ""
-    },
-    "Google Shopping / MPN": {
-        "col_name": "",
-        "default_value": ""
-    },
-    "Google Shopping / AdWords Grouping": {
-        "col_name": "",
-        "default_value": ""
-    },
-    "Google Shopping / AdWords Labels": {
-        "col_name": "",
-        "default_value": ""
-    },
-    "Google Shopping / Condition": {
-        "col_name": "",
-        "default_value": ""
-    },
-    "Google Shopping / Custom Product": {
-        "col_name": "",
-        "default_value": ""
-    },
-    "Google Shopping / Custom Label 0": {
-        "col_name": "",
-        "default_value": ""
-    },
-    "Google Shopping / Custom Label 1": {
-        "col_name": "",
-        "default_value": ""
-    },
-    "Google Shopping / Custom Label 2": {
-        "col_name": "",
-        "default_value": ""
-    },
-    "Google Shopping / Custom Label 3": {
-        "col_name": "",
-        "default_value": ""
-    },
-    "Google Shopping / Custom Label 4": {
-        "col_name": "",
-        "default_value": ""
-    },
-    "Variant Image": {
         "col_name": "",
         "default_value": ""
     },
@@ -179,12 +51,4 @@
         "col_name": "",
         "default_value": ""
     },
-    "Variant Tax Code": {
-        "col_name": "",
-        "default_value": ""
-    },
-    "Cost per item": {
-        "col_name": "",
-        "default_value": ""
-    }
 }

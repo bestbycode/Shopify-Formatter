@@ -5,8 +5,8 @@ const GOLDEN_RATIO = 0.52;
 const createHandler = (columnName, productData) => {
   // Don't actually need the columnName here
   try {
-    let title = productData["Title"].toLowerCase().replaceAll(" ", "_").replace(/&nbsp;/g, "_");
-    let vendor = productData["Vendor"].toLowerCase().replaceAll(" ", "_").replace(/&nbsp;/g, "_");
+    let title = productData["Title"].toLowerCase().replaceAll(" ", "-").replace(/&nbsp;/g, "-");
+    let vendor = productData["Vendor"].toLowerCase().replaceAll(" ", "-").replace(/&nbsp;/g, "-");
     return title.concat(vendor);
   } catch (error) {
     console.error(error);
@@ -47,15 +47,15 @@ const co2Calc = (columnName, productData) => {
     // Regexp(".?([0-9]+) *[xX] *([0-9]+)(?:(?:[gG][mM]?)|(?:[mM][lL])).", "i"),
     // Regexp(".?([0-9]+) *[xX] *([0-9]+)(?:(?:[kK][gG])|(?:[lL])).", "i")
     new RegexMatchedFunction(
-      RegExp(".?([0-9]+) *[xX] *([0-9]+)(?:(?:gm?)|(?:ml)).", "i"),
+      RegExp("([0-9]+) *[xX] *([0-9]+)(?:(?:gm?)|(?:ml))", "i"),
       mlgmHandler
     ),
     new RegexMatchedFunction(
-      RegExp(".?([0-9]+)s? *[xX] *([0-9]+)(?:(?:gm?)|(?:ml)).", "i"),
+      RegExp("([0-9]+)s? *[xX] *([0-9]+)(?:(?:gm?)|(?:ml))", "i"),
       mlgmHandler
     ),
     new RegexMatchedFunction(
-      RegExp(".?([0-9]+) *[xX] *([0-9]+)(?:(?:kg)|(?:l)).", "i"),
+      RegExp("([0-9]+) *[xX] *([0-9]+)(?:(?:kg)|(?:l))", "i"),
       kglHandler
     ),
   ];
@@ -70,7 +70,8 @@ const co2Calc = (columnName, productData) => {
 
   if (match == null) return ""; // Exceptional Case: No matches for expiry date were found
 
-  let weight = parseInt(match[0], match[1]);
+  console.log("CO2 Match!", match);
+  let weight = parseInt(match[1])*parseInt(match[2]);
   weight = currRegex.handler(weight);
 
   return GOLDEN_RATIO * weight;
